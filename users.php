@@ -1,27 +1,24 @@
 <?php
-// users.php
+// users.php (пароли в открытом виде)
 $users = [
     'john' => [
-        'password' => '$2y$10$W4l/zYq/5UO.6xZQDkzBwO.qC0v8k3o7U1eJjZ0dLmN7J1sK5bLm', // Хеш для "password"
+        'password' => 'password', // Пароль открытым текстом
         'birthday' => '1990-05-15'
     ],
     'jane' => [
-        'password' => '$2y$10$W4l/zYq/5UO.6xZQDkzBwO.qC0v8k3o7U1eJjZ0dLmN7J1sK5bLm', // Хеш для "password"
+        'password' => 'password', // Пароль открытым текстом
         'birthday' => '1985-12-20'
     ]
 ];
 
-// Функция для добавления пользователя
+// Функция добавления пользователя
 function addUser(string $login, string $password, string $birthday, array &$users): bool {
     if (isset($users[$login])) {
-        return false; // Пользователь уже существует
+        return false;
     }
-
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
     $users[$login] = [
-        'password' => $hashedPassword,
+        'password' => $password,
         'birthday' => $birthday
     ];
-
     return true;
 }
