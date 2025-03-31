@@ -52,7 +52,6 @@ if (getCurrentUser()) {
             <label>Пароль: <input type="password" name="password" required></label><br>
             <button type="submit">Войти</button>
         </form>
-        <p>Нет аккаунта? <a href="register.php">Зарегистрируйтесь</a></p>
     </div>
     </div>
 </body>
