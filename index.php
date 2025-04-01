@@ -45,11 +45,18 @@ if ($user) {
             <h1>SPA салон "Гармония"</h1>
             <?php if ($user): ?>
                 <div class="user-info">
-                    Здравствуйте, <?= htmlspecialchars($user) ?>
-                    <?php if ($birthday_message): ?>
-                        <div class="birthday-message"><?= htmlspecialchars($birthday_message) ?></div>
-                    <?php endif; ?>
-                    <a href="logout.php">Выйти</a>
+                    <div class="user-block-1">
+                        <div>
+                            Здравствуйте, <?= htmlspecialchars($user) ?>
+                            <?php if ($birthday_message): ?>
+                                <div class="birthday-message"><?= htmlspecialchars($birthday_message) ?></div>
+                            <?php endif; ?>
+                            <a href="logout.php">Выйти</a>
+                        </div>    
+                    </div>
+                    <div class="user-block-2">
+                        <img src="img/user.png" alt="user-avatar">
+                    </div>
                 </div>
             <?php endif; ?>
         </div>
