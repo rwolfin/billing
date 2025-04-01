@@ -85,3 +85,17 @@ p[style*="color: red"] {
     margin-bottom: 10px;
     font-size: 13px;
 }
+
+ul {
+    padding: 0px;
+    list-style: none;
+    font-size: 12px;
+    text-align: center;
+    background: #f6f6f6;
+    padding: 9px;
+    border-radius: 6px;
+}
+
+h3 {
+    text-align: center;
+}

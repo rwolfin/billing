@@ -124,3 +124,18 @@
             display: block;
         }
     }
+
+   
+
+    .user-info {
+        text-align: right;
+    }
+
+    .user-info a {
+        color: #e74c3c;
+    }
+
+
+    .user-info a:hover {
+        color: #3ce775;
+    }
