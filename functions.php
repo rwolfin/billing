@@ -11,7 +11,7 @@ function existsUser(string $login, array $users): bool {
     return isset($users[$login]);
 }
 
-// Проверка пароля БЕЗ хеширования
+// Проверка пароля в MD5
 function checkPassword(string $login, string $password, array $users): bool {
     return isset($users[$login]) && ($users[$login]['password'] === md5($password));
 }

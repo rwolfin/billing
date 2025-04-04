@@ -1,12 +1,12 @@
 <?php
-// users.php (пароли в открытом виде)
+// users.php (пароли в MD5)
 $users = [
     'john' => [
-        'password' => '5f4dcc3b5aa765d61d8327deb882cf99', // Пароль открытым текстом
-        'birthday' => '1990-05-15'
+        'password' => 'cc8711fc84bf0f94c1408f9e4fccff65', // Пароль в MD5
+        'birthday' => '1990-04-03'
     ],
     'jane' => [
-        'password' => '5f4dcc3b5aa765d61d8327deb882cf99', // Пароль открытым текстом
+        'password' => 'cc8711fc84bf0f94c1408f9e4fccff65', // Тут тоже пароль в MD5
         'birthday' => '1985-12-20'
     ]
 ];

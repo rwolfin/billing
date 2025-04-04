@@ -79,12 +79,16 @@ if ($user) {
             </div>
         </nav>
     </header>
-
+              
     <div class="container">
         <section class="promo">
-            <h2>Персональная скидка 20% на все услуги!</h2>
-            <p>До конца акции осталось:</p>
-            <div id="timer">24:00:00</div>
+                <?php if ($user): ?>
+                    <h2>Персональная скидка 20% на все услуги!</h2>
+                    <p>До конца акции осталось:</p>
+                    <div id="timer">24:00:00</div>
+                <?php else: ?>
+                   Авторизуйтесь чтобы получить персональную скидку 20% !
+                <?php endif; ?>
         </section>
 
         <section class="services">
@@ -95,15 +99,17 @@ if ($user) {
                 <div class="col">
                 <h3>Массаж</h3>
                 <p>Расслабляющий массаж всего тела</p>
-                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2850₽ (с учётом скидки 5%)' : '3000₽'; ?></p>
+                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2850₽ (<span class="marker">с учётом скидки 5%</span>)' : '3000₽'; ?></p>
                 </div>
             </div>
-            <div class="service-card">
-                <img src="img/1.jpg" alt="">
-                <h3>Обертывание</h3>
+            <div class="service-card flex">
+               <div class="col"><img src="img/1.jpg" alt=""></div>
+               <div class="col"> 
+               <h3>Обертывание</h3>
                 <p>Антицеллюлитное обертывание</p>
-                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2375₽ (с учётом скидки 5%)' : '2500₽'; ?></p>
+                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2375₽ (<span class="marker">с учётом скидки 5%</span>)' : '2500₽'; ?></p>
             </div>
+                </div>
         </section>
 
 
@@ -117,31 +123,31 @@ if ($user) {
                 <img src="img/2.jpg" alt="">
                 <h3>Массаж</h3>
                 <p>Расслабляющий массаж всего тела</p>
-                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2850₽ (с учётом скидки 5%)' : '3000₽'; ?></p>
+                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2850₽ (<span class="marker">с учётом скидки 5%</span>)' : '3000₽'; ?></p>
             </div>
             <div class="service-card">
                 <img src="img/1.jpg" alt="">
                 <h3>Обертывание</h3>
                 <p>Антицеллюлитное обертывание</p>
-                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2375₽ (с учётом скидки 5%)' : '2500₽'; ?></p>
+                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2375₽ (<span class="marker">с учётом скидки 5%</span>)' : '2500₽'; ?></p>
             </div>
             <div class="service-card">
                 <img src="img/2.jpg" alt="">
                 <h3>Массаж</h3>
                 <p>Расслабляющий массаж всего тела</p>
-                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2850₽ (с учётом скидки 5%)' : '3000₽'; ?></p>
+                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2850₽ (<span class="marker">с учётом скидки 5%</span>)' : '3000₽'; ?></p>
             </div>
             <div class="service-card">
                 <img src="img/1.jpg" alt="">
                 <h3>Обертывание</h3>
                 <p>Антицеллюлитное обертывание</p>
-                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2375₽ (с учётом скидки 5%)' : '2500₽'; ?></p>
+                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2375₽ (<span class="marker">с учётом скидки 5%</span>)' : '2500₽'; ?></p>
             </div>
             <div class="service-card">
                 <img src="img/2.jpg" alt="">
                 <h3>Массаж</h3>
                 <p>Расслабляющий массаж всего тела</p>
-                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2850₽ (с учётом скидки 5%)' : '3000₽'; ?></p>
+                <p>Цена: <?php echo $user && $days_to_birthday === 0 ? '2850₽ (<span class="marker">с учётом скидки 5%</span>)' : '3000₽'; ?></p>
             </div>
             <div class="service-card">
                 <img src="img/1.jpg" alt="">

@@ -60,7 +60,7 @@ if (getCurrentUser()) {
             echo "<h3>Примеры для входа:</h3>";
             echo "<ul>";
             foreach ($users as $login => $data) {
-                echo "<li>Логин: <strong>" . htmlspecialchars($login) . "</strong>, Пароль: <strong>password</strong></li>"; // Assuming password is always "password" for demo
+                echo "<li>Логин: <strong>" . htmlspecialchars($login) . "</strong>, Пароль: <strong>Bm5ERX4edn</strong></li>"; 
             }
             echo "</ul>";
             ?>

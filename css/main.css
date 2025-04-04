@@ -125,8 +125,6 @@
         }
     }
 
-   
-
     .user-info {
         text-align: right;
     }
@@ -151,4 +149,9 @@
     .user-block-2 img {
         width: 60px;
         padding-left: 15px;
+    }
+
+    span.marker {
+        background: #ffd600;
+        font-weight: 600;
     }
