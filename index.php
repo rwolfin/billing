@@ -26,7 +26,7 @@ if ($user) {
     if ($days_to_birthday === 0) {
         $birthday_message = "С днём рождения! Ваша скидка 5%";
     } else {
-        $birthday_message = "До дня рождения осталось дней: $days_to_birthday";
+        $birthday_message = "До дня рождения осталось $days_to_birthday дней:";
     }
 }
 ?>
