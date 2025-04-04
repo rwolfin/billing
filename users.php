@@ -3,7 +3,7 @@
 $users = [
     'john' => [
         'password' => 'cc8711fc84bf0f94c1408f9e4fccff65', // Пароль в MD5
-        'birthday' => '1990-04-03'
+        'birthday' => '1990-04-04'
     ],
     'jane' => [
         'password' => 'cc8711fc84bf0f94c1408f9e4fccff65', // Тут тоже пароль в MD5
