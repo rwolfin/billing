@@ -7,13 +7,12 @@ $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $login = $_POST['login'] ?? '';
     $password = $_POST['password'] ?? '';
-    $birthday = $_POST['birthday'] ?? ''; // Получаем дату рождения из формы
+    $birthday = $_POST['birthday'] ?? '';
     $users = getUsersList();
 
     if (checkPassword($login, $password, $users)) {
-        // Обновляем дату рождения пользователя (пока в массиве, позже в БД)
-        global $users; // Используем глобальную переменную $users
-        $users[$login]['birthday'] = $birthday; // Обновляем дату рождения
+        // Сохраняем дату рождения в сессии
+        $_SESSION['birthday'] = $birthday;
 
         loginUser($login);
         header('Location: index.php');
@@ -56,7 +55,7 @@ if (getCurrentUser()) {
         <form method="POST">
             <label>Логин: <input type="text" name="login" required></label><br>
             <label>Пароль: <input type="password" name="password" required></label><br>
-            <label>Дата рождения: <input type="date" name="birthday" required></label><br> <!-- Добавлено -->
+            <label>Дата рождения: <input type="date" name="birthday" required></label><br>
             <button type="submit">Войти</button>
         </form>
 

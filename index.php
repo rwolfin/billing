@@ -1,4 +1,4 @@
-<?
+<?php
 session_start();
 require_once 'functions.php';
 
@@ -12,24 +12,27 @@ if ($user) {
     $remaining_time = ($login_time + 86400) - time();
 
     // Форматирование времени входа
-    $login_time_formatted = date('H:i:s', $_SESSION['login_time'] ?? time()); // Добавлено
+    $login_time_formatted = date('H:i:s', $_SESSION['login_time'] ?? time());
 
-    // Проверка дня рождения
-    $users = getUsersList();
-    $birthday = new DateTime($users[$user]['birthday']);
-    $today = new DateTime('today');
-    $birthday->setDate($today->format('Y'), $birthday->format('m'), $birthday->format('d'));
+    // Проверка дня рождения (из сессии)
+    if (isset($_SESSION['birthday'])) {
+        $birthday = new DateTime($_SESSION['birthday']);
+        $today = new DateTime('today');
+        $birthday->setDate($today->format('Y'), $birthday->format('m'), $birthday->format('d'));
 
-    if ($birthday < $today) {
-        $birthday->modify('+1 year');
-    }
+        if ($birthday < $today) {
+            $birthday->modify('+1 year');
+        }
 
-    $days_to_birthday = $today->diff($birthday)->days;
+        $days_to_birthday = $today->diff($birthday)->days;
 
-    if ($days_to_birthday === 0) {
-        $birthday_message = "С днём рождения! Ваша скидка 5%";
+        if ($days_to_birthday === 0) {
+            $birthday_message = "С днём рождения! Ваша скидка 5%";
+        } else {
+            $birthday_message = "До дня рождения осталось $days_to_birthday дней:";
+        }
     } else {
-        $birthday_message = "До дня рождения осталось $days_to_birthday дней:";
+        $days_to_birthday = null; // Или другое значение по умолчанию
     }
 }
 ?>
